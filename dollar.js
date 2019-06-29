@@ -1,9 +1,11 @@
-class Dollar {
+const Money =  require('./money')
+
+class Dollar extends Money {
   constructor(amount) {
-    this.amount = amount
+    super(amount)
   }
   times(multiplier) {
-    this.amount *=  multiplier
+    return new Dollar(this.amount * multiplier)
   }
 }
 

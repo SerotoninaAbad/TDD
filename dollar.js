@@ -1,12 +1,12 @@
-const Money =  require('./money')
+const Money = require("./money");
 
 class Dollar extends Money {
   constructor(amount) {
-    super(amount)
+    super(amount, "USD");
   }
   times(multiplier) {
-    return new Dollar(this.amount * multiplier)
+    return new Dollar(this.amount * multiplier);
   }
 }
 
-module.exports = Dollar
+module.exports = Dollar;
